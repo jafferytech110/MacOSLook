@@ -1,0 +1,293 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html body{
+    background: url("../img/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* grid of whole display */
+#wrapper{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+    "nav1 nav1 nav1"
+    "middle1 middle1 middle1"
+    "middle1 middle1 middle1"
+    "middle1 middle1 middle1"
+    "footer footer footer";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0.08fr 1fr 1fr 1fr 0.3fr;
+}
+
+/* nav bar design */
+nav{
+    grid-area: nav1;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    background: rgba(82, 82, 82, 0.3);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav #left li, nav #right li{
+    padding:2px 5px;
+}
+
+/* middle section design */
+#middle{
+    grid-area: middle1;
+    display: flex;
+    /* grid-template-areas: 
+    "lefticons middle middle middle middle righticons"
+    "lefticons middle middle middle middle righticons"
+    "lefticons middle middle middle middle righticons"; */
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 20px;
+}
+
+/* right icons design */
+#righticons{
+    order:3;
+}
+
+#righticons ul{
+    display:flex;
+    flex-direction: column;
+    margin-right: 20px;
+
+}
+
+#righticons ul li{
+    list-style: none;
+    transition: all 500ms;
+}
+
+#righticons ul li a{
+    text-decoration: none;
+    
+}
+
+#righticons ul li:hover{
+    -ms-transform: scale(1.4,1.4); /* IE 9 */
+    transform: scale(1.4,1.4); /* Standard syntax */
+}
+
+#righticons ul li #fb{
+    color: 	#4267B2;
+}
+
+#righticons ul li #insta{
+    color:  #C13584;
+}
+
+#righticons ul li #youtube{
+    color: #FF0000;
+}
+
+#righticons ul li #github{
+    color: #333;
+}
+
+#righticons ul li #twitter{
+    color:  #00acee ;
+}
+/* 
+left widget design */
+#leftwidgets{
+    order:1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 20px;
+    /* grid-area: lefticons;    */
+}
+#leftwidgets div:nth-child(1) img {
+      width: 280px;
+      height:180;
+ }
+#leftwidgets div:nth-child(2) img {
+    width: 120px;
+    height: 120px;
+
+ }
+
+#leftwidgets div:nth-child(3) { 
+    width: 160px;
+    height: 120px;
+}
+
+#leftwidgets div img{
+    border-radius: 10px;
+    transition: all 500ms;
+    width:100%;
+}
+
+#leftwidgets div img:hover{
+    -ms-transform: scale(1.1,1.1); /* IE 9 */
+    transform: scale(1.1,1.1); /* Standard syntax */
+}
+
+/* middle apps design */
+#middleApps{
+    order:2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    grid-area: middle;
+    margin-right: 175px;
+    margin-left: 175px;
+}
+
+#middleApps .apps{
+    width: 100px;
+    height: 100px;
+    transition: all 500ms;
+}
+
+#middleApps .apps:hover{
+    -ms-transform: scale(1.2,1.2); /* IE 9 */
+    transform: scale(1.2,1.2); /* Standard syntax */
+}
+
+#middleApps .apps img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+#footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border:none;
+    
+
+}
+
+#footer ul{
+    background: rgba(214, 211, 211, 0.3);
+    padding: 5px;
+    border-radius: 15px;
+    padding-left: 8px;
+}
+
+#footer ul li{
+    display: inline-block;
+    width:50px;
+    height: 50px;
+    margin: 5px;
+    transition: all 500ms;
+}
+
+#footer ul li:hover{
+    -ms-transform: scale(1.4,1.4); /* IE 9 */
+    transform: scale(1.4,1.4); /* Standard syntax */
+}
+
+#footer ul li img{
+    width: 100%;
+}
+
+@media  screen and (max-width: 1300px) {
+    #middleApps .apps{
+        width: 70px;
+        height: 70px;
+        transition: all 500ms;
+    }
+    #middleApps{
+        order:2;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        grid-area: middle;
+        margin-right: 75px;
+        margin-left: 75px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .displayNone{
+        display: none;
+    }
+}
+
+@media screen and (max-width:700px) {
+    #middle{
+        grid-area: middle1;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 10px;
+    }
+
+    .displayNoneSmall{
+        display: none;
+    }
+    #leftwidgets div:nth-child(3) { 
+        width: 150px;
+        height: 130px;
+        margin: 40px;
+        margin-top: 0;
+    }
+
+    #righticons ul{
+        display:flex;
+        flex-direction: row;
+        margin:20px;
+        margin-bottom: 0;
+        gap: 20px;
+    }
+    #middleApps{
+        order:2;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        grid-area: middle;
+        margin: 20px;
+    }
+    #middleApps .apps{
+        width: 40px;
+        height: 40px;
+        transition: all 500ms;
+    }
+    #footer ul li.displayNoneSmall{
+        display: none;
+    }
+    #footer ul li{
+        display: inline-block;
+        width:40px;
+        height: 40px;
+        margin: 5px;
+        transition: all 500ms;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    .displayNoneSmallest{
+        display: none;
+    }
+}
