@@ -71,12 +71,29 @@ nav #left li, nav #right li{
     display:flex;
     flex-direction: column;
     margin-right: 20px;
+    gap:10px;
 
 }
 
 #righticons ul li{
+    display: inline-block;
     list-style: none;
     transition: all 500ms;
+    width: 60px;
+    height: 60px;
+    
+}
+
+#righticons ul li img{
+    width: 100%;
+}
+
+#righticons ul li img#fbIcon{
+    border-radius: 10px;
+}
+
+#righticons ul li img#gitHubIcon{
+    border-radius: 10px;
 }
 
 #righticons ul li a{
@@ -158,8 +175,8 @@ left widget design */
 }
 
 #middleApps .apps{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     transition: all 500ms;
 }
 
@@ -259,6 +276,11 @@ left widget design */
         margin:20px;
         margin-bottom: 0;
         gap: 20px;
+    }
+    #righticons ul li{
+        width: 40px;
+        height: 40px;
+        
     }
     #middleApps{
         order:2;
