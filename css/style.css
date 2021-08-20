@@ -172,7 +172,7 @@ font-size: 0.7em;
   gap: 35px;
   margin-right: 25px;
   margin-left: 75px;
-  height: 50%;
+  height: 40%;
 }
 
 #middleApps .apps {
@@ -243,12 +243,16 @@ font-size: 0.7em;
   #middle {
     display: none;
   }
+  .displayOnlySmall{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1000px){
   .displayNone {
     display: none;
   }
+ 
   #middle #middleApps .displayNoneSmallest{
     display: none;
   }
@@ -269,14 +273,20 @@ font-size: 0.7em;
     background-size: cover;
     height: 100vh;
   }
+  #footer ul li.displayOnlySmall{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 870px) {
  
-  .displayNoneSmall {
+  #footer ul li.displayNoneSmall {
     display: none;
   }
   #middle #middleApps .displayNoneSmallest{
+    display: none;
+  }
+  #middle #middleApps .displayNoneSmall{
     display: none;
   }
 
@@ -291,7 +301,7 @@ font-size: 0.7em;
     grid-area: middle1;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 30px;
     grid-gap: 20px;
     align-items: center;
   }
@@ -303,6 +313,10 @@ font-size: 0.7em;
     margin-right: 25px;
     margin-left: 25px;
     height: 50%;
+    margin-bottom: 10px;
+  }
+  #footer ul li.displayOnlySmall{
+    display: none;
   }
 
   
@@ -330,6 +344,9 @@ font-size: 0.7em;
   #leftwidgets .twoApps, #leftwidgets .news{
     max-width: 300px;
   }
+  #leftwidgets .news{
+    padding-bottom: 0;
+  }  
   #middle #middleApps .displayOnlySmall{
     width: 50px;
     height: 50px;
