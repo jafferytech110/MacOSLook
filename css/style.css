@@ -7,404 +7,344 @@
 }
 
 html body {
-  background: url("../img/bg.jpg");
+  background: url("../img/bgs.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 100vh; */
   font-family: Arial, Helvetica, sans-serif;
-  height: 100%;
   background-attachment: fixed;
-  
+  color: #fff;
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
 }
 
 /* grid of whole display */
-#wrapper {
-  display: grid;
-  width: 100%;
-  grid-template-areas:
-    "nav1     nav1    nav1"
-    "middle1 middle1 middle1"
-    "middle1 middle1 middle1"
-    "middle1 middle1 middle1"
-    "footer footer footer";
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 0.07fr 1fr 1fr 1fr 0.3fr;
-}
 
 /* nav bar design */
-nav {
-  grid-area: nav1;
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  align-items: center;
-  background: rgba(214, 211, 211, 0.1);
-  padding-left: 0.8%;
-  padding-right: 0.8%;
-}
 
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-nav #left li,
-nav #right li {
-  padding: 2px 5px;
-}
 
 /* middle section design */
-#middle {
-  grid-area: middle1;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 70px;
-  grid-gap: 20px;
-}
-
 
 /* 
 left widget design */
-#leftwidgets {
-  order: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-left: 60px;
-  height: 80%;
-  width: 70%;
-  flex: 0 0 300px;
+
+/* middle apps design */
+
+/*Footer Design */
+
+@media screen and (min-width: 1000px) {
+  .displayNotLaptop{
+    display: none;
+  }
+  #wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav #left, nav #right{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px;
+    margin:auto 10px;
+  }
+
+  nav ul li{
+    list-style-type: none;
+    margin: auto 5px;
+  }
+  #footer{
+    width: 100%;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+  }
+  #footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .08rem;
+    background: rgba(189, 189, 189, 0.3);
+    padding: 5px;
+    border-radius: .5rem;
+  }
+  #footer ul li{
+    width: 3rem;
+    height: 3rem;
+    list-style-type: none;
+    margin: 0.2rem;
+  }
+  #footer ul li img{
+    width: 100%;
+  }
+  #footer ul li img[alt="facebook"],#footer ul li img[alt="github"],#footer ul li img[alt="twitter"]{
+    border-radius: 0.8rem;
+  }
 
 }
 
-#leftwidgets .dateTime{
-  display: flex;
-  flex-direction: column;
-  color: #fff;  
-}
+@media screen and (max-width: 1000px){
+  
+  #wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 100%;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav #left, nav #right{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px;
+    margin:auto 10px;
+  }
 
-#leftwidgets .dateTime time{
-  font-size: 4em;
-}
+  nav ul li{
+    list-style-type: none;
+    margin: auto 5px;
+  }
+  #middle{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* height: 80%; */
+  }
+  .displayOnlyLaptop{
+    display: none;
+  }
 
-#leftwidgets .dateTime .date{
-  font-size: 1.5em;
-}
+  #middle #middleApps{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    align-content: flex-start;
+    gap: 2.5rem;
+    padding: 1rem;
 
-#leftwidgets .twoApps{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+  }
 
-#leftwidgets .twoApps div{
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  flex: 1;
-  min-height: 120px;
-  max-height: 122px;
-}
-#leftwidgets .twoApps div:nth-child(1) p:nth-child(1){
+  #middle #middleApps div{
+    width:3rem;
+    height: 3rem;
+  }
+
+  #middle #middleApps div img{
+    width: 100%;
+  }
+
+  #middle #middleApps div p{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  #middle #middleApps div img[alt="appleWatch"], 
+  #middle #middleApps div img[alt="google Analytics"],
+  #middle #middleApps div img[alt="facebook"],
+  #middle #middleApps div img[alt="twitter"]{
+    border-radius: 10px;
+  }
+  #middle #middleApps div img[alt="insta"]{
+    border-radius: 5px;
+  }
+  #wrapper #middle #leftwidgets{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #wrapper #middle #leftwidgets div.dateTime .time{
+    font-size: 4rem;
+  }
+  #wrapper #middle #leftwidgets div.dateTime .date{
+    font-size: 2rem;
+  }
+  #wrapper #middle #leftwidgets .twoApps{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+  }
+  #wrapper #middle #leftwidgets .twoApps div{
+    background: #fff;
+    color: #000;
+    width: 45%;
+    height: 8rem;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(1){
   color:#DC143C;
   text-transform: uppercase;
 }
-#leftwidgets .twoApps div:nth-child(1) p:nth-child(2){
+#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(2){
   font-size: 2em;
 }
-#leftwidgets .twoApps div:nth-child(1) p:nth-child(3), #leftwidgets .twoApps div:nth-child(1) p:nth-child(4){
+#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(3),#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(4){
   font-size: 0.8em;
   font-weight: bold;
 }
-#leftwidgets .twoApps div:nth-child(1) p:nth-child(3) span{
+#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(3) span{
   color:#00CED1;
   font-weight: bold;
 }
-#leftwidgets .twoApps div:nth-child(1) p:nth-child(4) span{
+#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(4) span{
   color: #8B008B;
   font-weight: bold;
 }
-#leftwidgets .twoApps div:nth-child(2){
+#wrapper #middle #leftwidgets .twoApps div:nth-child(2){
   background: linear-gradient(to bottom,	#4682B4, #87CEFA);
   color: #fff;
 }
-#leftwidgets .twoApps div:nth-child(2) p:nth-child(2){
+#wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(2){
   font-size: 2em;
 }
-#leftwidgets .twoApps div:nth-child(2) p:nth-child(3), #leftwidgets .twoApps div:nth-child(2) p:nth-child(5){
+#wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(3), #wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(5){
   font-size: 0.8em;
   font-weight: bold;
 }
-#leftwidgets .twoApps div:nth-child(2) p:nth-child(4) span i{
+#wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(4) span i{
   color:#FFD700 ;
 }
-#leftwidgets .news{
+#wrapper #middle #leftwidgets .news{
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
 }
-#leftwidgets .news div{
+#wrapper #middle #leftwidgets .news div{
   display: flex;
   justify-content: space-between;
   color: #DC143C;
   margin-bottom: 8px;
 }
+#wrapper #middle #leftwidgets .news div p{
+  color: #DC143C;
+}
 
-#leftwidgets .news p {
+#wrapper #middle #leftwidgets .news p {
   font-size: 0.9em;
   margin-bottom: 5px;
+  color: #000;
 }
-#leftwidgets .news p:nth-child(2), #leftwidgets .news p:nth-child(4){
+#wrapper #middle #leftwidgets .news p:nth-child(2),#wrapper #middle #leftwidgets .news p:nth-child(4){
 color:	#989898;
 font-weight: bold;
 margin-bottom: none;
 font-size: 0.7em;
 
 }
-/* middle apps design */
-#middleApps {
-  order: 2;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
-  margin-right: 25px;
-  margin-left: 75px;
-  height: 40%;
-}
-
-#middleApps .apps {
-  width: 70px;
-  height: 70px;
-  transition: all 500ms;
-}
-
-#middleApps .apps p{
-  color: #fff;
-  text-align: center;
-}
-
-#middleApps .apps:hover {
-  -ms-transform: scale(1.2, 1.2); /* IE 9 */
-  transform: scale(1.2, 1.2); /* Standard syntax */
-}
-
-#middleApps .apps img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-#footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-
-}
-
-#footer ul {
-  background: rgba(214, 211, 211, 0.2);
-  padding: 5px;
-  padding-left: 8px;
-  border-radius: 10px;
-}
-
-#footer ul li {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  transition: all 500ms;
-}
-
-#footer ul li:hover {
-  -ms-transform: scale(1.4, 1.4); /* IE 9 */
-  transform: scale(1.4, 1.4); /* Standard syntax */
-}
-
-#footer ul li img {
-  width: 100%;
-}
-
-#footer ul li img[alt="twitter"],
-#footer ul li img[alt="github"] {
-  border-radius: 10px;
-}
-
-#footer ul li img[alt="facebook"],
-#footer ul li img[alt="home"],
-#footer ul li img[alt="youtube"],
-#footer ul li img[alt="insta"] {
-  border-radius: 7px;
-}
-@media screen and (min-width: 1000px) {
-  #middle {
-    display: none;
-  }
-  .displayOnlySmall{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1000px){
-  .displayNone {
-    display: none;
-  }
- 
-  #middle #middleApps .displayNoneSmallest{
-    display: none;
-  }
-  #footer ul li{
-    width: 50px;
-    height: 50px;
-  }
-  #footer ul li.displayNone{
-    display: none;
-  }
-  nav{
-    background: transparent;
-  }
-  html body{
-    background: url("../img/bgs.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
-  #footer ul li.displayOnlySmall{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 870px) {
- 
-  #footer ul li.displayNoneSmall {
-    display: none;
-  }
-  #middle #middleApps .displayNoneSmallest{
-    display: none;
-  }
-  #middle #middleApps .displayNoneSmall{
-    display: none;
-  }
-
-  #footer ul li.displayNoneSmall {
-    display: none;
-  }
-  
-}
-
-@media screen and (max-width: 700px) {
-  #middle {
-    grid-area: middle1;
+  #footer{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    grid-gap: 20px;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
-  #middleApps {
-    order: 2;
+  #footer ul{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-right: 25px;
-    margin-left: 25px;
-    height: 50%;
-    margin-bottom: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .08rem;
+    background: rgba(189, 189, 189, 0.3);
+    padding: 5px;
+    border-radius: .5rem;
   }
-  #footer ul li.displayOnlySmall{
+  #footer ul li{
+    width: 3rem;
+    height: 3rem;
+    list-style-type: none;
+    margin: 0.2rem;
+  }
+  #footer ul li img{
+    width: 100%;
+  }
+  #footer ul li img[alt="facebook"],#footer ul li img[alt="github"],#footer ul li img[alt="twitter"]{
+    border-radius: 0.8rem;
+  }
+}
+@media screen and (max-width: 870px) {
+ #wrapper #footer ul li.displayNotTablet{
+   display: none;
+ }
+}
+@media screen and (max-width: 737px) {
+  .displayNotSmallTablet{
     display: none;
   }
-
-  
-  #footer ul li.displayNoneSmallest {
-    display: none;
-  }
-  #middle #middleApps .displayNoneSmallest{
-    display: none;
-  }
-  nav #right .displayNoneSmallest{
-    display: none;
-  }
-  #leftwidgets {
-    order: 1;
+}
+@media screen and (max-width:610px) {
+  #wrapper #middle{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin:auto;
-    height: 80%;
-    width: auto;
-    flex: 0 0 300px;
-  
+    align-items: center;
   }
-
-  #leftwidgets .twoApps, #leftwidgets .news{
-    max-width: 300px;
+  #wrapper #middle #leftwidgets{
+    width: 60%;
   }
-  #leftwidgets .news{
-    padding-bottom: 0;
-  }  
-  #middle #middleApps .displayOnlySmall{
-    width: 50px;
-    height: 50px;
+  #wrapper #middle #middleApps{
+    gap: 1.5rem;
+    justify-content: center;
   }
-  #middle #middleApps {
-    gap:30px;
+  .displayNotSmallestTablet{
+    display: none;
   }
-  #middle #middleApps .displayOnlySmall p{
-    font-size: 0.8em;;
-  }
-
 }
-
-@media screen and (max-width:385px) {
-  #middle #middleApps .displayOnlySmall{
-    width: 50px;
-    height: 50px;
+@media screen and (max-width:540px){
+  .displayNotMobile{
+    display: none;
   }
-  #middle #middleApps {
-    gap:20px;
-    margin-bottom: 10px;
+  #wrapper #middle #middleApps{
+    gap: 1rem;
+    justify-content: center;
+    width: 90%;
   }
-  #middle #middleApps .displayOnlySmall p{
-    font-size: 0.7em;
-    
-  }
-  #footer ul li{
-    width: 50px;
-    height: 50px;
+  #wrapper #middle #leftwidgets{
+    width: 90%;
   }
 
-}
-@media screen and (max-width:280px){
-  #middle #middleApps .displayOnlySmall{
-    width: 40px;
-    height: 40px;
-  }
-  #middle #middleApps {
-    gap:10px;
-    margin-bottom: 5px;
-  }
-  #middle #middleApps .displayOnlySmall p{
-    font-size: 0.7em;
-    
-  }
-  #leftwidgets .twoApps, #leftwidgets .news{
-    max-width: 260px;
-  }
-  #footer ul li{
-    width: 40px;
-    height: 40px;
-  }
+
 } 
+@media screen and (max-width:540px){
+  #wrapper #middle #middleApps{
+    gap: 0.5rem;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    padding: 0;
+  }
+  #wrapper #middle #middleApps p{
+    display: none;
+  }
+}
+@media (max-height:600px){
+ 
+}
 
 
