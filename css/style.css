@@ -202,7 +202,7 @@ left widget design */
     border-radius: 10px;
     padding: 10px;
   }
-}
+
 #wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(1){
   color:#DC143C;
   text-transform: uppercase;
@@ -210,7 +210,8 @@ left widget design */
 #wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(2){
   font-size: 2em;
 }
-#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(3),#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(4){
+#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(3),
+#wrapper #middle #leftwidgets .twoApps div:nth-child(1) p:nth-child(4){
   font-size: 0.8em;
   font-weight: bold;
 }
@@ -229,7 +230,8 @@ left widget design */
 #wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(2){
   font-size: 2em;
 }
-#wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(3), #wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(5){
+#wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(3), 
+#wrapper #middle #leftwidgets .twoApps div:nth-child(2) p:nth-child(5){
   font-size: 0.8em;
   font-weight: bold;
 }
@@ -256,22 +258,23 @@ left widget design */
   margin-bottom: 5px;
   color: #000;
 }
-#wrapper #middle #leftwidgets .news p:nth-child(2),#wrapper #middle #leftwidgets .news p:nth-child(4){
+#wrapper #middle #leftwidgets .news p:nth-child(2),
+#wrapper #middle #leftwidgets .news p:nth-child(4){
 color:	#989898;
 font-weight: bold;
 margin-bottom: none;
 font-size: 0.7em;
 
 }
-  #footer{
+#footer{
     width: 100%;
     display: flex;
     -ms-flex-direction: row;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-  #footer ul{
+}
+#footer ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -280,19 +283,19 @@ font-size: 0.7em;
     background: rgba(189, 189, 189, 0.3);
     padding: 5px;
     border-radius: .5rem;
-  }
-  #footer ul li{
-    width: 3rem;
-    height: 3rem;
-    list-style-type: none;
-    margin: 0.2rem;
-  }
-  #footer ul li img{
-    width: 100%;
-  }
-  #footer ul li img[alt="facebook"],#footer ul li img[alt="github"],#footer ul li img[alt="twitter"]{
-    border-radius: 0.8rem;
-  }
+}
+#footer ul li{
+  width: 3rem;
+  height: 3rem;
+  list-style-type: none;
+  margin: 0.2rem;
+}
+#footer ul li img{
+  width: 100%;
+}
+#footer ul li img[alt="facebook"],#footer ul li img[alt="github"],#footer ul li img[alt="twitter"]{
+  border-radius: 0.8rem;
+}
 }
 @media screen and (max-width: 870px) {
  #wrapper #footer ul li.displayNotTablet{
@@ -348,8 +351,4 @@ font-size: 0.7em;
     display: none;
   }
 }
-@media (max-height:600px){
- 
-}
-
 
